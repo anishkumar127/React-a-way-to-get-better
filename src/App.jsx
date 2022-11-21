@@ -1,15 +1,20 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import './App.css';
+function Button(props) {
+  const { color, label } = props;
+  const styleObject ={
+    color:color,
+  }
+  return <button style={styleObject}> {label}</button>;
+}
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      its just a template actual code in topic wise in the different-different
-      branch
-    </>
+    <Button label="Click here" color="red" />
+    <Button label="Login" color="blue" />
+  </>
   );
 }
 
