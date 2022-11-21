@@ -1,29 +1,28 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import './App.css';
-import Button from './components/Button';
-import {Dashboard} from './components/Dashboard';
-import User from './components/User';
-
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import "./App.css";
+import Card from "./components/Card";
 function App() {
-  const style = {
-    color:"red",
-    fontSize :"20px",
-    backgroundColor:"white"
-  }
-  const loginButtonHandler = () =>{
-    console.log("Login");
-  }
-  const logoutButtonHandler = () =>{
-    console.log("Logout");
-  }
+  const userProfile = [
+    {
+      name: "anish",
+      age: 22,
+    },
+    {
+      name: "kumar",
+      age: 23,
+    },
+    {
+      name: "bishnoi",
+      age: 24,
+    },
+  ];
   return (
     <>
-    <Button handler={logoutButtonHandler}  style={style}> <p> click here  </p> </Button>
-    <Button handler={loginButtonHandler} style={style}>Login </Button>
-    <Dashboard/>
-    <User/>
-  </>
+      {userProfile.map(({ name, age },index) => {
+        return <Card key={index} name={name} age={age} />;
+      })}
+    </>
   );
 }
 
