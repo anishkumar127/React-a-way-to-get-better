@@ -1,11 +1,8 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import './App.css';
-function Button(props) {
-  const { color ,children, style,handler} = props;
-  
-  return <button  style={style} onClick={handler}> {children}</button>;
-}
+import Button from './components/Button';
+import {Dashboard} from './components/Dashboard';
 
 function App() {
   const style = {
@@ -23,6 +20,7 @@ function App() {
     <>
     <Button handler={logoutButtonHandler}  style={style}> <p> click here  </p> </Button>
     <Button handler={loginButtonHandler} style={style}>Login </Button>
+    <Dashboard/>
   </>
   );
 }
