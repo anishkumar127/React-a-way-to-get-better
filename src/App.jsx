@@ -2,18 +2,20 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import './App.css';
 function Button(props) {
-  const { color, label } = props;
-  const styleObject ={
-    color:color,
-  }
-  return <button style={styleObject}> {label}</button>;
+  const { color ,children, style} = props;
+  return <button  style={style}> {children}</button>;
 }
 
 function App() {
+  const style = {
+    color:"red",
+    fontSize :"20px",
+    backgroundColor:"white"
+  }
   return (
     <>
-    <Button label="Click here" color="red" />
-    <Button label="Login" color="blue" />
+    <Button  style={style}> <p> click here  </p> </Button>
+    <Button style={style}>Login </Button>
   </>
   );
 }
