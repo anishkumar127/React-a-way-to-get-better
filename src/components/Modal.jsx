@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Modal = (props) => {
+const Modal = ({children,type, style}) => {
   return (
     <div>
-        {props.children}
+        <h2 style={style}>{type}</h2> 
+        {children}
     </div>
   )
 }
