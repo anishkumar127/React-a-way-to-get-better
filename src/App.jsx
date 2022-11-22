@@ -1,27 +1,27 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
-import Card from "./components/Card";
+import Feed from "./components/Feed";
 function App() {
-  const userProfile = [
+  const tweets = [
     {
       name: "anish",
-      age: 22,
+     content:"this is my 1 content",
     },
     {
       name: "kumar",
-      age: 23,
+      content:"this is my 2 content",
+
     },
     {
       name: "bishnoi",
-      age: 24,
+      content:"this is my 3 content",
+
     },
   ];
   return (
     <>
-      {userProfile.map(({ name, age },index) => {
-        return <Card key={index} name={name} age={age} />;
-      })}
+      <Feed name={tweets[0].name}/>
     </>
   );
 }
