@@ -4,7 +4,8 @@ const Feed = (props) => {
   return (
     <div>
       {props.name}
-      <p>{props.content}</p>
+      <p>{props.children}</p>
+      
     </div>
   )
 }
