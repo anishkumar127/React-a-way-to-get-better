@@ -2,6 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import Feed from "./components/Feed";
+import Modal from "./components/Modal";
 function App() {
   const tweets = [
     {
@@ -21,11 +22,19 @@ function App() {
   ];
   return (
     <>
-      <Feed name={tweets[0].name}>
-        {tweets[0].content}
-      </Feed>
+   
 
-      <Feed name={tweets[1].name}> this is children </Feed>
+
+    <Modal>
+    <p> Do you want to save changes?</p>
+    <button>Yes</button>
+    <button>No</button>
+    </Modal>
+    <Modal>
+
+    <p>your changes have been saved!</p>
+    <button>Yes</button>
+    </Modal>
     </>
   );
 }
