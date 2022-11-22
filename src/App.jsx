@@ -4,18 +4,22 @@ import "./App.css";
 import Modal from "./components/Modal";
 function App() {
 
+  const clickHandler = (event) =>{
+    console.log(event);
+  }
+  const changeHandler= (event)=>{
+    console.log(event.target.value);
+  }
   return (
     <>
-      <Modal type="Confirmation">
-        <p> Do you want to save changes?</p>
-        <button>Yes</button>
-        <button>No</button>
-      </Modal>
-      <Modal type="Information" style={{backgroundColor:"gray"}}>
+    <input type="text" onChange={(event)=> {
+      return (event){
+        return changeHandler(event)
+      }
+    }}/>
 
-        <p>your changes have been saved!</p>
-        <button>Yes</button>
-      </Modal>
+    
+     <button onClick={(event)=> clickHandler(event)}>Click me</button>
     </>
   );
 }
