@@ -2,16 +2,7 @@ import React, { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import User from "./components/User";
-const userList = [
-  {
-    username: "anish",
-    status: "Pending"
-  },
-  {
-    username: "kumar",
-    status: "Pending"
-  }
-];
+import {USER_LIST} from './data/userData';
 function App() {
 
   const [users, setUsers] = useState(userList);
